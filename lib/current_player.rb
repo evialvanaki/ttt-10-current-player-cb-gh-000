@@ -9,11 +9,13 @@ if board[k] == "O" || board[k] == "X"
 end
 return i
 end
+
 def current_player(board)
   l = turn_count(board)
-  if l.odd?
-    return "O"
-  else
+
+  if l % 2 == 0
     return "X"
+  else
+    return "O"
   end
 end
